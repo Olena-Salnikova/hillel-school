@@ -1,0 +1,325 @@
+/* Основні стилі для всіх сторінок */
+body {
+    width: 80%;
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+    background-color: #f4f4f4;
+}
+
+/* Шапка (header) */
+header {
+    display: flex; /* Використовуємо flexbox для розміщення логотипа та меню */
+    align-items: center; /* Вирівнюємо по центру */
+    justify-content: space-between; /* Розподіляємо простір між логотипом і меню */
+    padding: 10px 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+}
+
+/* Логотип */
+.logo-left {
+    display: flex; /* Дозволяє вирівнювати логотип */
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px; /* Додаємо відступ від логотипу */
+}
+
+/* Стилі для навігаційного меню */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Використовуємо flexbox для горизонтального меню */
+}
+
+nav ul li {
+    margin: 0 15px; /* Відстань між елементами */
+}
+
+/* Посилання в меню */
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Ефект наведення */
+nav ul li a:hover {
+    color: #666;
+}
+
+/* Активне посилання */
+a.active {
+    color: green;
+}
+
+/* Мобільна версія (до 1024px) */
+@media screen and (max-width: 1023px) {
+    header {
+        flex-direction: column; /* Перемикаємо елементи у вертикальну колонку */
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .logo {
+        width: 50px; /* Зменшуємо розмір логотипа */
+        height: 50px;
+        margin: 0;
+    }
+
+    nav ul {
+        flex-direction: column; /* Відображаємо меню вертикально */
+        padding-top: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Додаємо відступи між пунктами меню */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Трохи зменшуємо шрифт */
+    }
+}
+
+/* Стилі для основного контенту */
+section {
+    padding: 20px;
+    background: white;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Стилізація заголовків */
+h1 {
+    text-align: center;
+    color: #000;
+    font-size: 24px;
+}
+
+h2 {
+    text-align: center;
+    color: #444;
+    font-size: 22px;
+}
+
+h3 {
+    color: green;
+}
+
+/* Стилі для зображення на index */
+.profile-photo {
+    width: 600px;
+    max-width: 100%; /* Забезпечує адаптивність */
+    height: auto;
+    margin: 30px auto; /* Центрує по горизонталі */
+    display: block;     /* Щоб margin auto працював */
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Адаптація для мобільних пристроїв */
+@media (max-width: 1023px) {
+    .profile-photo {
+        width: 90%;
+    }
+}
+
+/* Стилі для зображень у галереї */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Адаптація для мобільних пристроїв */
+@media (max-width: 1023px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+    }
+}
+
+/* Стилі для відео у галереї */
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.video-gallery video {
+    width: 320px;
+    max-width: 100%; /* Забезпечує адаптацію під мобільні */
+    height: auto;
+}
+
+/* Адаптація для мобільних пристроїв */
+@media (max-width: 768px) {
+    .video-gallery {
+        gap: 10px;
+    }
+
+    .video-gallery video {
+        width: 90%; /* Робить відео більш гнучким */
+    }
+}
+
+/* Стилі для форми */
+input[type=text], input[type=email] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Адаптація форми для мобільних пристроїв */
+@media (max-width: 1023px) {
+  input[type=text], input[type=email] {
+    width: 90%; /* Робить поля ширшими для зручності введення */
+  }
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Стилі для відвіданої лінки*/
+#visited:link {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#visited:visited {
+  color: pink !important;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+#visited:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+#visited:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+/* Стилі для таблиці */
+#customers {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Адаптація таблиці для мобільних пристроїв */
+@media (max-width: 1023px) {
+  #customers {
+    display: block;
+    overflow-x: auto; /* Додає горизонтальний скрол для збереження структури */
+    white-space: nowrap;
+  }
+
+  #customers td, #customers th {
+    padding: 6px;
+    font-size: 14px;
+  }
+}
+
+/* Стилі для відео */
+.video-container iframe {
+  width: 560px;
+  height: 315px;
+  max-width: 100%; /* Робить відео адаптивним */
+  margin: 10px;
+}
+
+/* Адаптація відео для мобільних пристроїв */
+@media (max-width: 1023px) {
+  .video-container iframe {
+    width: 100%; /* Робить відео гнучкішим */
+    display: block;
+    margin: 10px auto;
+  }
+}
+
+/* Стилі для футера */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: lightgrey;
+    border-radius: 10px;
+}
+
+/* Стилі для тексту у футері */
+footer p {
+    margin: 0;
+    padding-left: 20px;
+}
+
+/* Стилі для кнопки "Back to Top" */
+#backToTop {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #04AA6D;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+#backToTop:hover {
+    background-color: #45a049;
+}

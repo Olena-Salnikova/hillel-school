@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HTML приклади</title>
+        <link rel="icon" href="../images/favicon.ico">
+	<link rel="stylesheet" href="../style.css">
+</head>
+<body id="top">
+	<header>
+		<a href="../index.html" class="logo-left">
+			<img src="../images/logo.png" alt="logo" class="logo">
+		</a>
+		<nav>
+			<ul>
+				<li><a href="../index.html">Головна</a></li>
+				<li><a href="./gallery.html">Галерея</a></li>
+				<li><a href="./contact.html">Контакти</a></li>
+				<li><a href="./education.html" class="active">HTML приклади</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section>
+		<h1>Приклади основних HTML тегів</h1>
+		<article>
+			<h3>Заголовки</h3>
+			<p>Заголовки створюються за допомогою тегів h1-h6:</p>
+			<h1 style="color:blue;">Заголовок 1 - приклад внутрішніх стилів</h1>
+			<h2>Заголовок 2</h2>
+			<h3>Заголовок 3</h3>
+			<h4>Заголовок 4</h4>
+			<h5>Заголовок 5</h5>
+			<h6>Заголовок 6</h6>
+		</article>
+		<br>
+		<article>
+			<h3>Списки</h3>
+			<p style="font-family:courier;">Невпорядкований список:</p>
+			<ul>
+				<li>Елемент 1</li>
+				<li>Елемент 2</li>
+				<li>Елемент 3</li>
+			</ul>
+			<p style="font-family:courier;">Впорядкований список:</p>
+			<ol>
+				<li>Перший пункт</li>
+				<li>Другий пункт</li>
+				<li>Третій пункт</li>
+			</ol>
+		</article>
+		<br>
+		<article>
+			<h3>Форма</h3>
+			<form action="#" method="post">
+				<label for="name">Ім'я:</label><br>
+				<input type="text" id="name" name="name"><br><br>
+        			<label for="email">Email:</label><br>
+        			<input type="email" id="email" name="email"><br><br>
+        			<input type="submit" value="Відправити">
+			</form>
+		</article>
+		<br>
+		<article>
+			<h3>Приклад лінки зі статусом "відвідана"</h3>
+			<a href="./education.html" target="_blank" id="visited">link test</a>
+		</article>
+		<br>
+		<article>
+			<h3>Таблиця</h3>
+			<table id="customers">
+				<tr>
+					<th>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</th>
+					<th>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</th>
+					<th>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</th>
+				</tr>
+				<tr>
+					<td><i>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</i></td>
+					<td>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</td>
+					<td><big>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</big></td>
+				</tr>
+				<tr>
+					<td><i>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</i></td>
+					<td>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</td>
+					<td><big>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</big></td>
+				</tr>
+			</table>
+		</article>
+		<br>
+		<article class="video-container">
+			<h3>Вбудовані елементи - Відео</h3>
+				<iframe src="https://www.youtube.com/embed/LDU_Txk06tM" frameborder="0" allowfullscreen>				</iframe>
+		</article>
+	</section>
+	<footer>
+		<p>&copy; 2025 Олена</p>
+		<a href="#top" id="backToTop">Back to Top</a>
+	</footer>
+</body>
+</html>
